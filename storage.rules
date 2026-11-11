@@ -1,0 +1,15 @@
+rules_version = '2';
+
+// Reglas de Cloud Storage (se activan cuando el proyecto tenga Storage habilitado)
+service firebase.storage {
+  match /b/{bucket}/o {
+	// imágenes de los signos zodiacales
+	match /zodiaco/{archivo} {
+		allow read: if true;
+		// solo usuarios autenticados, solo imágenes y de máximo 5 MB
+		allow write: if request.auth != null &&
+						request.resource.contentType.matches('image/.*') &&
+						request.resource.size < 5 * 1024 * 1024;
+	}
+  }
+}

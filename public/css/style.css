@@ -1,0 +1,103 @@
+/* CSS Document */
+:root{
+	--primary: #110C0CFF;
+	--light: #FFFFFF;
+	--grey1: #EEEEEE;
+	--grey2: #F0F1F1;
+	--orange: #D6731D;
+	--lblue1: #559EE0;
+	--lblue2: #B4C5E5;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+.header .navbar {
+	background-color: rgba(255,255,255,0.5) !important;
+}
+
+body{
+	padding-top: 70px;
+}
+
+.formatDiv{
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imgBlock{
+	height: 150px;
+	width: 150px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.divAnuncio{
+	background-color: var(--light);
+	border: thin solid var(--lblue1);
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px var(--lblue2);
+	float: left;
+	margin: 8px;
+	padding-top: 5px;
+	text-align: center;
+	width: 180px;
+	min-height: 300px;
+	cursor: pointer;
+	transition: transform 0.2s;
+}
+
+/* Práctica 3: tarjeta con los nuevos datos del signo */
+.divAnuncio:hover{
+	transform: scale(1.04);
+}
+
+.signoNombre{
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.signoRango{
+	color: var(--primary);
+	font-size: 0.85em;
+	margin-bottom: 6px;
+}
+
+.signoDatos{
+	border-top: thin solid var(--grey1);
+	font-size: 0.85em;
+	padding: 6px 4px 8px;
+}
+
+.badgeElem{
+	background-color: var(--grey2);
+	border-radius: 10px;
+	display: inline-block;
+	font-weight: bold;
+	margin-bottom: 4px;
+	padding: 1px 10px;
+}
+
+/* color del borde y de la etiqueta según el elemento */
+.elem-Fuego  { border-color: #E4572E; }
+.elem-Tierra { border-color: #8B6B3E; }
+.elem-Aire   { border-color: #7FB7E6; }
+.elem-Agua   { border-color: #2E6FD6; }
+
+.elem-Fuego  .badgeElem { background-color: #E4572E; color: var(--light); }
+.elem-Tierra .badgeElem { background-color: #8B6B3E; color: var(--light); }
+.elem-Aire   .badgeElem { background-color: #7FB7E6; color: var(--primary); }
+.elem-Agua   .badgeElem { background-color: #2E6FD6; color: var(--light); }
+
+/* Práctica 4: vista previa de la imagen en la página de edición */
+.imgEditar{
+	height: 120px;
+	width: 120px;
+	object-fit: contain;
+}
